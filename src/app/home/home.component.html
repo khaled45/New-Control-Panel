@@ -1,0 +1,9 @@
+<mat-drawer-container class="example-container" style="height: 100%;" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">I'm a drawer</mat-drawer>
+    <div class="Route" style="background-color: #1d3557;">
+        <button class="btn btn-light text-danger my-1" ng (click)="Logout()">تسجيل الخروج</button>
+        <div class="h-100 bg-light">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</mat-drawer-container>

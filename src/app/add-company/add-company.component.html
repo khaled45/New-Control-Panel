@@ -1,0 +1,94 @@
+<div class="all">
+    <div class="row shadow-lg m-3 header">
+        <div class="col-6">
+            <h1 class="py-2 col-6 text-right">اضافة شركة</h1>
+        </div>
+        <div class="col-6"> <i (click)="backClicked()" class="fas fa-arrow-alt-circle-left mt-3"
+                style="font-size: 2rem; margin-top: .5rem;color: #1d3557  ;"></i>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row form">
+            <form novalidate [formGroup]='AddCompanyForm' (ngSubmit)='Confirm(AddCompanyForm.value)'
+                class="px-3 bg-white rounded shadow-lg">
+                <div class="row form-group ">
+                    <!-- Arabic Name -->
+                    <mat-form-field class="example-full-width w-100 col-xl-6 my-3">
+                        <mat-label> الأسم بالعربية</mat-label>
+                        <input type="text" matInput formControlName="NameAr" placeholder="Ex:الحمد جروب">
+                        <mat-error *ngIf="s.NameAr.hasError('required')">
+                            <strong>مطلوب *</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <!-- Engilsh Name -->
+                    <mat-form-field class="example-full-width w-100  col-xl-6 my-3">
+                        <mat-label>الأسم بالانجليزية</mat-label>
+                        <input (keyup)=normalize($event) type="text" matInput formControlName="NameEn"
+                            placeholder="Ex:Al-Hamd Group">
+                        <mat-error *ngIf="s.NameEn.hasError('required')">
+                            <strong>مطلوب *</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <!-- Company Email -->
+                    <mat-form-field class="example-full-width w-100  col-xl-6 my-3">
+                        <mat-label>البريد الاليكتروني</mat-label>
+                        <input type="email" matInput formControlName="CompanyEmail" placeholder="Ex :example@gmail.com">
+                        <mat-error *ngIf="s.CompanyEmail.hasError('required')">
+                            <strong>مطلوب *</strong>
+                        </mat-error>
+                        <mat-error *ngIf="s.CompanyEmail.hasError('email')">
+                            <strong>من فضلك ادخل بريد الاليكتروني صحيح *</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <!-- Normalized Name -->
+                    <mat-form-field class="example-full-width w-100  col-xl-6 my-3">
+                        <mat-label>Normalized Name</mat-label>
+                        <input type="text" matInput formControlName="NormalizedName" [value]='' maxlength="8"
+                            placeholder="Ex :ALHAMD">
+                        <mat-error *ngIf="s.NormalizedName.hasError('required')">
+                            <strong>مطلوب *</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <!-- Logo -->
+                    <mat-form-field class="example-full-width w-100  col-xl-12 my-3">
+                        <mat-icon matSuffix>folder</mat-icon>
+                        <ngx-mat-file-input formControlName="Logo" placeholder="لوجو الشركة"></ngx-mat-file-input>
+                    </mat-form-field>
+                    <!-- Admin Name -->
+                    <mat-form-field class="example-full-width w-100  col-xl-6 my-3">
+                        <mat-label>اسم الأدمن</mat-label>
+                        <input type="text" matInput formControlName="adminName" placeholder="Ex : نور محمد">
+                        <mat-error *ngIf="s.adminName.hasError('required')">
+                            <strong>مطلوب *</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <!-- Admin Phone -->
+                    <mat-form-field class="example-full-width w-100  col-xl-6 my-3">
+                        <mat-label>رقم الهاتف</mat-label>
+                        <input type="text" matInput formControlName="AdminPhone" placeholder="Ex :01226618952">
+                        <mat-error *ngIf="s.AdminPhone.hasError('required')">
+                            <strong>مطلوب *</strong>
+                        </mat-error>
+                        <mat-error *ngIf="s.AdminPhone.hasError('pattern')">
+                            <strong>من فضلك ادخل رقم التليفون صحيح *</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <div class=" col-xl-12 text-center">
+                        <mat-error *ngIf="errorFlag" class="mb-3">
+                            <strong>خطأ بالبيانات *</strong>
+                        </mat-error>
+                        <mat-error *ngIf="existEmail" class="mb-3">
+                            <strong>البريد الاليكتروني مستخدم مسبقًا *</strong>
+                        </mat-error>
+                        <button class="btn mx-3" *ngIf="!Sent" type="submit"
+                            [disabled]="!AddCompanyForm.valid">اضافة</button>
+                        <button *ngIf="Sent" class="btn mx-3" type="submit" [disabled]="Sent">اضافة <img
+                                class="img-fluid" src="../../assets/images/loader.gif" width="15" height="15"
+                                alt=""></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

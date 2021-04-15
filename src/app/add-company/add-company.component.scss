@@ -1,0 +1,29 @@
+h1 {
+    font-family: 'Almarai', sans-serif !important;
+}
+
+.all {
+    height: 100%;
+    padding-bottom: 4rem;
+    padding-top: 0.1rem;
+}
+
+button {
+    background-color: #1d3557;
+    color: #fff;
+}
+
+.form {
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .form {
+        margin: 0.5rem !important;
+        padding-bottom: 1rem;
+    }
+    .all {
+        padding-bottom: 0rem;
+    }
+}

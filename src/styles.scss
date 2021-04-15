@@ -1,0 +1,220 @@
+    /* You can add global styles to this file, and also import other style files */
+    
+    @import '~@angular/material/theming';
+    @import "~bootstrap/scss/bootstrap";
+    // @import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+    // @import "./node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+    @import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
+    html,
+    body {
+        height: 100%;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+    /* Importing Bootstrap SCSS file. */
+    
+    .active {
+        cursor: pointer;
+        color: #fff !important;
+        background-color: #000;
+    }
+    
+    * {
+        outline: none;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+    
+    h6,
+    h5,
+    h5,
+    h3,
+    h2,
+    p,
+    label,
+    select,
+    option,
+    button,
+    a,
+    td,
+    span,
+    input,
+    th,
+    mat-option {
+        font-family: 'Almarai', sans-serif !important;
+    }
+    
+    span {
+        font-family: initial;
+        // font-size: 1rem !important;
+    }
+    
+    .active:hover {
+        color: rgb(255, 214, 78) !important;
+    }
+    
+    .Viewbtn {
+        background-color: rgb(240, 150, 16);
+        color: #fff;
+        transition: all .3s ease-in;
+    }
+    
+    .Viewbtn:hover {
+        background-color: rgb(204, 124, 3);
+    }
+    
+    .savebtn {
+        background-color: rgb(197, 141, 36) !important;
+        color: #fff;
+    }
+    
+    input,
+    button {
+        outline: none !important;
+        cursor: pointer;
+    }
+    
+    .parent {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    i {
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .fa-pen {
+        // text-align: right;
+        color: #fff;
+        border-radius: 50%;
+        padding: 7px;
+        margin: 2px;
+        background-color: rgba(134, 134, 134, 0.733);
+        font-size: 12px;
+    }
+    
+    .fa-trash {
+        // text-align: right;
+        color: #fff;
+        border-radius: 50%;
+        padding: 7px;
+        margin: 2px;
+        background-color: rgba(207, 75, 14, 0.849);
+        font-size: 12px;
+    }
+    
+    h3 {
+        text-align: right;
+        font-weight: 500;
+    }
+    
+    .card {
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 15px -9px #000000;
+    }
+    
+    .card:hover {
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 15px -9px #000000 !important;
+    }
+    
+    .shaded {
+        margin-top: 5px;
+        background-color: #4e4e4e3d;
+        padding: 5px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    
+    span,
+    li {
+        cursor: pointer;
+    }
+    
+    .card {
+        border: none;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        box-shadow: 0 0 0 0;
+        // border-radius: 10px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #7394c2;
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #7394c2;
+    }
+    
+    .search-hero {
+        max-width: 500px;
+        padding-bottom: 50px;
+        margin: auto;
+    }
+    
+    .mycard2 {
+        width: auto;
+        height: 420px;
+        position: relative;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0px 11px 34px -30px #000000;
+        padding: 0%;
+    }
+    
+    .mylayer {
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        right: 0;
+        left: 0;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        transition: all .2s ease-in-out;
+        box-shadow: 0px 1px 18px -10px #000000;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .img-card:hover+.mylayer {
+        position: absolute;
+        bottom: -10%;
+    }
+    
+    .img-card image {
+        border-radius: 7px;
+        width: 100%;
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+        // font-family: Roboto, "Helvetica Neue", sans-serif;
+    }

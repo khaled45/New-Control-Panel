@@ -1,0 +1,14 @@
+<input type="file" #file (change)="onFileChange(file.files)" placeholder="أختر الصورة" value="" />
+<button mat-raised-button color="primary" [mat-dialog-close]="data" cdkFocusInitial [disabled]="!images">
+  تغيير الصورة
+</button>
+<span style="color: red" *ngIf="message">{{ message }}</span>
+<ng-container>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let item of imgURL">
+                <img [src]="item" *ngIf="imgURL" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</ng-container>

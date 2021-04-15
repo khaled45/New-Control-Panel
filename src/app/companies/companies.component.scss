@@ -1,0 +1,203 @@
+table {
+    width: 100%;
+}
+
+.details {
+    .bg-dark {
+        img {
+            border-radius: 10px;
+            box-shadow: -4px 0px 16px -9px #000000;
+        }
+        h3 {
+            text-align: center !important;
+            color: #fff;
+        }
+        p {
+            text-align: center !important;
+            color: #fff;
+            font-weight: 100;
+        }
+    }
+}
+
+.highlight {
+    background: #1d355760;
+    /* green */
+}
+
+.header {
+    div a {
+        background-color: #1d3557;
+        color: #fff;
+    }
+}
+
+h1 {
+    font-family: 'Almarai', sans-serif !important;
+}
+
+.myinp2 {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    position: relative;
+}
+
+.myinp2 input {
+    border: none !important;
+    background-color: rgba(196, 196, 196, 0.445);
+    padding: 7px 35px;
+    outline: none;
+    color: rgba(65, 65, 65, 0.918);
+    border-radius: 25px;
+}
+
+.myinp2 .fa-search {
+    position: absolute;
+    top: 0.8rem;
+    margin-right: 0.5rem;
+    // left: .5rem;
+    outline: none;
+    background-color: transparent;
+    color: rgba(65, 65, 65, 0.918) !important;
+    transform: translate(-10%, 0%);
+}
+
+::ng-deep .mat-elevation-z8 {
+    box-shadow: none;
+}
+
+.container-full {
+    margin: 0 auto;
+    width: 90%;
+    // margin-bottom: 100px;
+    position: relative;
+}
+
+table {
+    td span {
+        display: flex;
+        justify-content: center;
+    }
+    th strong {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.blue-row {
+    height: 100%;
+    background: linear-gradient(#4b7fe4, #99b4e8);
+}
+
+.grey-row {
+    background-color: #e3e3e3;
+}
+
+.darkgrey-row {
+    height: 100%;
+    background-color: #bebebe;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #1d3557a9;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.example-table-container {
+    position: relative;
+    width: 99%;
+    overflow: auto;
+}
+
+.head {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+p {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.arabicName {
+    padding-bottom: 1.5rem !important;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .container-full {
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .table {
+        width: 99.9% !important;
+        padding-top: 2rem;
+        overflow-x: scroll;
+    }
+    td {
+        text-align: center;
+    }
+    .myinp2 input {
+        padding: 7px 35px 6px 0px;
+    }
+    .head {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .EditeIcon i {
+        font-size: 1rem !important;
+        padding: 5px !important;
+    }
+    .CardIcon i {
+        font-size: 1rem !important;
+        padding: 5px !important;
+    }
+}
+
+.EditeIcon i {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #FFC107;
+}
+
+.CardIcon i {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #86bb71;
+}
+
+.CardIcon2 i {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #ee5b41;
+}
+
+.RemoveIcon i {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #ff944f;
+}

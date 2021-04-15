@@ -1,0 +1,90 @@
+<a (click)="onNoClick()" style="text-align: right;"><i class="fas fa-times"></i></a>
+
+<div class="" style="padding-top: 0px;">
+
+    <div class="shadow-lg header">
+        <h1 class="py-3 mr-3 text-right">تعديل شركة</h1>
+    </div>
+    <mat-dialog-content >
+        <div class="container">
+            <div class="row">
+                <form novalidate [formGroup]=' EditeCompanyForm' (ngSubmit)='OnAction()'
+                    class=" bg-white rounded shadow-lg">
+                    <div class="row form-group form">
+                        <!-- Arabic Name -->
+                        <mat-form-field class="example-full-width w-100 col-xl-6 col-12 my-3">
+                            <mat-label> الأسم بالعربية</mat-label>
+                            <input type="text" matInput formControlName="NameAr" placeholder="Ex:الحمد جروب">
+                            <mat-error *ngIf="s.NameAr.hasError('required')">
+                                <strong>مطلوب *</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- Engilsh Name -->
+                        <mat-form-field class="example-full-width w-100  col-xl-6 col-12  my-3">
+                            <mat-label>الأسم بالانجليزية</mat-label>
+                            <input type="text" matInput formControlName="NameEn" placeholder="Ex:Al-Hamd Group">
+                            <mat-error *ngIf="s.NameEn.hasError('required')">
+                                <strong>مطلوب *</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- Company Email -->
+                        <mat-form-field class="example-full-width w-100  col-xl-6  col-12 my-3">
+                            <mat-label>البريد الاليكتروني</mat-label>
+                            <input type="email" matInput formControlName="CompanyEmail"
+                                placeholder="Ex :example@gmail.com">
+                            <mat-error *ngIf="s.CompanyEmail.hasError('required')">
+                                <strong>مطلوب *</strong>
+                            </mat-error>
+                            <mat-error *ngIf="s.CompanyEmail.hasError('email')">
+                                <strong>من فضلك ادخل بريد الاليكتروني صحيح *</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- Normalized Name -->
+
+                        <mat-form-field class="example-full-width w-100  col-xl-6  col-12 my-3">
+                            <mat-label>Normalized Name</mat-label>
+                            <input type="text" matInput formControlName="NormalizedName" placeholder="Ex :ALHAMD">
+                            <mat-error *ngIf="s.NormalizedName.hasError('required')">
+                                <strong>مطلوب *</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- Max Sites -->
+                        <mat-form-field class="example-full-width w-100  col-xl-6 col-12 my-3">
+                            <mat-label>اقصي عدد مواقع</mat-label>
+                            <input type="text" matInput formControlName="MaxSites" placeholder="Ex :20">
+                            <mat-error *ngIf="s.MaxSites.hasError('required')">
+                                <strong>مطلوب *</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- Max Users -->
+                        <mat-form-field class="example-full-width w-100  col-xl-6 col-12 my-3">
+                            <mat-label>اقصي عدد مستخدمين</mat-label>
+                            <input type="text" matInput formControlName="MaxUsers" placeholder="Ex :100">
+                            <mat-error *ngIf="s.MaxUsers.hasError('required')">
+                                <strong>مطلوب *</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <div class=" col-xl-12 my-3 text-center">
+                            <mat-error *ngIf="errorFlag" class="mb-3">
+                                <strong>خطأ بالبيانات *</strong>
+                            </mat-error>
+                            <mat-error *ngIf="existEmail" class="mb-3">
+                                <strong>البريد الاليكتروني مستخدم مسبقًا *</strong>
+                            </mat-error>
+                            <button class="btn add mx-3" *ngIf="!Sent" type="submit"
+                                [disabled]="!EditeCompanyForm.dirty ||!EditeCompanyForm.valid">حفظ</button>
+                            <button *ngIf="Sent" class="btn add mx-3" type="submit" [disabled]="Sent">جاري الحفظ <img
+                                    class="img-fluid" src="../../assets/images/loader.gif" width="15" height="15"
+                                    alt=""></button>
+                            <a class="btn mx-3" (click)="onNoClick()" style="border: 1px solid #000;">الغاء</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-dialog-content>
+
+</div>

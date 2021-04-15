@@ -1,0 +1,43 @@
+h1 {
+    font-family: 'Almarai', sans-serif !important;
+    text-align: right;
+}
+
+span {
+    color: #1d3557;
+    font-family: 'Almarai', sans-serif !important;
+    text-align: right;
+    border-bottom: 4px #1d3557 solid;
+}
+
+.mat-dialog-content {
+    display: flex;
+    justify-content: center;
+}
+
+.AddData {
+    padding: 1rem;
+    div {
+        margin-bottom: 0.5rem;
+        h3 {
+            font-size: 1rem;
+            text-align: center !important;
+            color: #050505;
+            border-bottom: 1px solid #ffc107;
+            padding: 0.5rem;
+        }
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    .mat-dialog-content {
+        padding: 0px !important;
+    }
+    .suspend {
+        padding: 1rem;
+    }
+}

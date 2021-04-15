@@ -1,0 +1,43 @@
+<a (click)="onNoClick()" style="text-align: right;"><i class="fas fa-times"></i></a>
+
+<div>
+    <mat-dialog-content>
+        <div *ngIf="data?.type == 'add'">
+            <h1>هل متأكد من اضافة</h1>
+            <div class="shadow-lg AddData" style="box-shadow: -4px 0px 16px -9px #000000; width: auto;">
+                <div>
+                    <h3>الاسم بالعربية</h3>
+                    <p>{{data?.data.NameAr}}</p>
+                </div>
+
+                <div>
+                    <h3>الأسم بالانجليزية</h3>
+                    <p>{{data?.data.NameEn}}</p>
+                </div>
+                <div>
+                    <h3>البريد الاليكتروني</h3>
+                    <p>{{data?.data.CompanyEmail}}</p>
+                </div>
+
+                <div>
+                    <h3>NormalizedName</h3>
+                    <p>{{data?.data.NormalizedName}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="data?.type == 'suspend'" class="suspend">
+            <ng-container *ngIf="data?.data.suspend == true; else elseTemplate">
+                <h1 class="pb-4">هل متأكد من ايقاف <span>{{data?.data.CompanyName}}</span></h1>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <h1 class="pb-4">هل متأكد من تفعيل <span>{{data?.data.CompanyName}}</span> </h1>
+            </ng-template>
+
+        </div>
+    </mat-dialog-content>
+    <div class="py-3 justify-content-center d-flex">
+        <a class="btn btn-success mx-1" [mat-dialog-close]="true"> تأكيد</a>
+        <a class="btn shadow-lg mx-1" style="border: 1px solid #000;" mat-button mat-dialog-close>الغاء</a>
+    </div>
+</div>

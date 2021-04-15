@@ -1,0 +1,24 @@
+h1 {
+    font-family: 'Almarai', sans-serif !important;
+}
+
+.add {
+    background-color: #1d3557;
+    color: #fff;
+}
+
+.form {
+    margin: 3rem;
+}
+
+.mat-dialog-content {
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .form {
+        margin: 0.5rem !important;
+    }
+}
